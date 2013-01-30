@@ -1,15 +1,14 @@
 package org.codelabo
 
+import org.specs2.mutable._
+import org.specs2.runner.JUnitRunner
 import org.junit.runner.RunWith
-import org.scalatest.junit.JUnitRunner
-import org.scalatest.FunSpec
-import org.scalatest.matchers.ShouldMatchers
 
 @RunWith(classOf[JUnitRunner])
-class HelloSpec extends FunSpec with ShouldMatchers {
-  describe("Hello.hello") {
-    it("shuld return string \"hello\"") {
-      new Hello().hello should equal("hello")
+class HelloSpec extends Specification {
+  "Hello.hello" should {
+    "return string 'hello'" in {
+      new Hello().hello mustEqual "hello"
     }
   }
 }
