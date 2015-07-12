@@ -7,13 +7,10 @@ repositories {
 }
 
 dependencies {
-  scalaTools 'org.scala-lang:scala-compiler:2.10.0'
-  scalaTools 'org.scala-lang:scala-library:2.10.0'
+  compile 'org.scala-lang:scala-library:2.11.7'
 
-  compile 'org.scala-lang:scala-library:2.10.0'
-
-  testCompile 'junit:junit:4.11'
-  testCompile 'org.scalatest:scalatest_2.10:1.9.1'
+  testCompile 'junit:junit:4.12'
+  testCompile 'org.scalatest:scalatest_2.11:2.2.5'
 }
 
 // Fast Scala Compiler
@@ -30,5 +27,5 @@ tasks.withType(ScalaCompile) {
 }
 
 task wrapper(type: Wrapper) {
-  gradleVersion = 1.4
+  gradleVersion = 2.4
 }
